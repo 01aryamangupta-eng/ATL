@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ATAL Tinkering Lab — Class 7 Portal</title>
+  <style>
+ :root{
+  --bg:#071018;
+  --panel:#0f1720;
+  --muted:#9fd;
+  --accent:#00ffcc;
+  --card:#0b1a1f;
+  --text:#e6f7ff;
+}
+
+body.light{
+  --bg:#ffffff;
+  --panel:#f5f5f5;
+  --card:#ffffff;
+  --text:#000000;
+  --muted:#444;
+}
+
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,Helvetica;background:var(--bg);color:var(--text);
+}
+    .wrap{max-width:1100px;margin:18px auto;padding:18px}
+ header{
+  background:linear-gradient(180deg, rgba(0,0,0,0.03), transparent);
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(0,255,204,0.06);
+  text-align:center;
+}
+    h1{color:var(--accent);margin:6px 0;font-size:1.6rem}
+    .logo-gap{height:12px}
+  img.logo{
+  display:block;
+  margin:12px auto;
+  height:210px;   /* increase this number to make it longer */
+  width:auto;     /* keeps image proportions correct */
+}
+
+
+    /* auth */
+    .auth{display:flex;gap:16px;justify-content:center;margin:18px 0}
+   .card{
+  background:var(--panel);
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  width:380px
+}
+
+    .card h3{margin:6px 0;color:var(--accent)}
+input,select,textarea{
+  width:100%;
+  padding:8px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #999;
+  background:var(--panel);
+  color:var(--text)
+}
+    .btn{padding:10px 12px;border-radius:8px;border:none;cursor:pointer;background:var(--accent);color:#002;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* layout */
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:14px 0}
+    .role-pill{background:#052426;color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:700}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:14px}
+
+    /* left content */
+    .panel{background:var(--card);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    details.file{margin:8px 0;padding:8px;border-left:3px solid var(--accent);border-radius:8px;background:#071418}
+    summary{cursor:pointer}
+    .student-row{display:flex;justify-content:space-between;gap:8px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);margin:6px 0;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+    .muted{color:var(--muted);font-size:.92rem}
+
+    /* right sidebar */
+    .sidebar .box{margin-bottom:12px}
+    .hidden{display:none !important}
+
+    /* leaderboard styles */
+    .leaderboard{display:flex;flex-direction:column;gap:8px}
+    .rank{padding:8px;border-radius:8px;background:#071a1f;border:1px solid rgba(255,255,255,0.02)}
+    .gold{border-left:6px solid #ffd700}
+    .silver{border-left:6px solid #c0c0c0}
+    .bronze{border-left:6px solid #cd7f32}
+
+    /* small helpers */
+    .small{font-size:.9rem}
+    .row{display:flex;gap:8px;align-items:center}
+    .center{text-align:center}
+
+    /* responsive */
+    @media(max-width:920px){.grid{grid-template-columns:1fr}.auth{flex-direction:column;align-items:center}.card{width:92%}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>ATAL TINKERING LAB — CLASS 7 PORTAL</h1>
+      <div class="logo-gap"></div>
+      <!-- one blank line gap (visual spacer) -->
+      <img class="logo" src="A_web_page_screenshot_of_the_ATL_–_Atal_Tinkering_.png" alt="ATL logo">
+    </header>
+<!-- ATL LANDING PAGE SECTION (LONG + PROFESSIONAL) -->
+<section id="landing" class="panel" style="margin-top:18px; padding:24px;">
+
+
+  <h1 class="center" style="margin-bottom:16px;">ATAL TINKERING LAB (ATL)</h1>
+
+  <!-- Intro Paragraph -->
+  <p>
+    The <b>Atal Tinkering Lab (ATL)</b> is a flagship initiative of the 
+    <b>Atal Innovation Mission (AIM)</b>, NITI Aayog, Government of India. 
+    It is designed to foster curiosity, creativity, and innovation among 
+    students in STEM (Science, Technology, Engineering, Mathematics) subjects.
+    The labs provide an environment where students learn by doing, solve real-world 
+    problems, and develop critical thinking and entrepreneurship skills.
+  </p>
+
+  <!-- Section: Mission -->
+  <h2 style="margin-top:24px;">Our Mission</h2>
+  <p>
+    ATL’s mission is to empower young minds with hands-on experience in technology 
+    and innovation. Students are encouraged to explore, experiment, fail, and improve 
+    their designs, fostering creativity, problem-solving, and confidence.
+  </p>
+<img src="images/atl-mission.png" alt="ATL Mission" 
+     style="width:60%; height:auto; display:block; margin:16px auto; border-radius:8px;">
+
+  <!-- Section: Objectives -->
+  <h2 style="margin-top:24px;">Objectives of ATL</h2>
+  <ul>
+    <li>Promote hands-on learning and innovation in STEM</li>
+    <li>Encourage entrepreneurship at an early age</li>
+    <li>Develop critical thinking, problem-solving, and computational skills</li>
+    <li>Provide mentorship and guidance for real-world projects</li>
+    <li>Enhance teamwork, leadership, and presentation skills</li>
+  </ul>
+
+  <!-- Section: Tools & Technology -->
+  <h2 style="margin-top:24px;">Tools & Technology</h2>
+  <p>
+    Students get access to a variety of modern tools and equipment to bring 
+    their ideas to life:
+  </p>
+  <ul>
+    <li>Electronics kits (Arduino, Raspberry Pi, sensors, motors, LEDs)</li>
+    <li>Robotics kits and automation modules</li>
+    <li>IoT devices for smart projects</li>
+    <li>3D printers and CAD software for prototyping</li>
+    <li>Computational platforms for coding and simulation</li>
+  </ul>
+
+<img src="images/atl-projects.png" alt="Student Projects" 
+     style="width:60%; height:auto; display:block; margin:16px auto; border-radius:8px;">
+
+
+  <!-- Section: Projects -->
+  <h2 style="margin-top:24px;">Projects & Student Work</h2>
+  <p>
+    Our Class 7 students have created amazing projects such as:
+  </p>
+  <ul>
+    <li>Solar-powered robotic cars</li>
+    <li>Smart home automation devices</li>
+    <li>Environmental monitoring sensors (air & water quality)</li>
+    <li>Health tech wearables</li>
+    <li>Automated traffic and safety solutions</li>
+  </ul>
+
+<img src="images/atl-tools.png" alt="ATL Tools" 
+     style="width:60%; height:auto; display:block; margin:16px auto; border-radius:8px;">
+
+  <!-- Section: Success Stories -->
+  <h2 style="margin-top:24px;">Success Stories</h2>
+  <p>
+    Our students have won school, state, and national-level competitions, 
+    showcasing innovation and creativity. Projects have ranged from 
+    <b>smart energy solutions</b> to <b>automated robotics</b> that solve real-world problems.
+  </p>
+
+  <!-- Section: ATL at Our School -->
+  <h2 style="margin-top:24px;">ATL at Our School</h2>
+  <p>
+    The ATL at our school is a space for Class 7 students to explore, innovate, 
+    and build practical solutions. Mentors guide students through design thinking, 
+    project planning, and execution. All student projects are documented and tracked 
+    securely through this portal.
+  </p>
+
+  <!-- Section: Guidelines -->
+  
+<h2 style="margin-top:24px;">Student Guidelines</h2>
+  <p class="muted">
+    🔒 Students can only view their own projects and feedback. Teachers and admins 
+    manage content, review projects, and provide guidance. This ensures privacy 
+    and a focused learning environment.
+  </p>
+
+  <!-- Section: Call to Action -->
+  <h2 style="margin-top:24px;" class="center">Ready to Explore?</h2>
+  <p class="center">
+    Scroll down to the login section below and access your ATL dashboard 
+    to view projects, submit your work, and receive feedback from mentors.
+  </p>
+
+  <!-- Add some spacing for scroll -->
+ <div style="height:50px;"></div>
+</section>
+
+<!-- AUTHENTICATION -->
+<div class="auth" id="auth-area" style="position:relative; display:flex; justify-content:center; align-items:flex-start; gap:16px; margin:18px 0;">
+  
+  <!-- Login Card -->
+  <div class="card">
+    <h3 style="margin-bottom:16px;">Login</h3>
+
+    <!-- Role selection -->
+    <label><small>Role</small></label>
+    <select id="roleSelect">
+      <option value="student">Student</option>
+      <option value="super">ATL-Teacher</option>
+    </select>
+
+    <!-- Username & Password -->
+    <label><small>Username</small></label>
+    <input id="username" placeholder="e.g. 001M or teacher1">
+    <label><small>Password</small></label>
+    <input id="password" type="password" placeholder="password">
+
+    <!-- Buttons -->
+    <div style="display:flex;gap:8px;justify-content:center;margin-top:8px">
+      <button class="btn" onclick="handleLogin()">Sign in</button>
+      <button class="btn ghost" onclick="fillSample()">Fill sample</button>
+    </div>
+
+    <!-- Login message -->
+    <p id="login-msg" style="color:#ff9999;margin-top:8px;text-align:center"></p>
+  </div>
+
+  <!-- Theme Toggle Button (floats top-right of auth container) -->
+  <button class="btn ghost" onclick="toggleTheme()" 
+          style="position:absolute; top:0; right:0; margin:12px;">Toggle Theme</button>
+
+  <!-- Public Info Card -->
+  <div class="card" id="public-info">
+    <h3>About This Portal</h3>
+    <p style="margin:6px 0;color:var(--muted)">
+      Class 7 — private student pages. Students can only view their own project and feedback. Teachers and admins can manage content.
+    </p>
+    <h4 style="margin:6px 0">Sections Included</h4>
+    <ul style="margin:6px 0;padding-left:18px;color:var(--muted)">
+      <li>7 Mahanadi</li>
+      <li>7 Tapti</li>
+      <li>7 Ravi</li>
+      <li>7 Jhelum</li>
+      <li>7 Chenab</li>
+      <li>7 Damodar</li>
+    </ul>
+    <p class="small muted">
+      Student login is the student ID (e.g. <code>001M</code>, <code>012T</code>) and the default password is <code>password</code> unless changed by an admin.
+    </p>
+  </div>
+
+</div>
+    <!-- MAIN CONTENT (hidden until login) -->
+    <div id="main" class="hidden">
+      <div class="topbar">
+        <div><span id="who" class="role-pill">Role: —</span> <span id="userLabel" style="margin-left:8px;color:var(--muted)"></span></div>
+        <div style="display:flex;gap:8px">
+          <button class="btn" onclick="logout()">Logout</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <!-- left: database or student page -->
+          <div id="adminArea" class="panel hidden">
+            <h3>Class 7 Database (Admin)</h3>
+            <div style="display:flex;gap:8px;margin-bottom:8px">
+              <input id="adminSearch" placeholder="Search by ID, name, project, section">
+              <select id="filterSection"><option value="">All Sections</option><option>Mahanadi</option><option>Tapti</option><option>Ravi</option><option>Jhelum</option><option>Chenab</option><option>Damodar</option></select>
+              <button class="btn" onclick="doSearch()">Search</button>
+            </div>
+            <div id="studentsList"></div>
+          </div>
+
+          <div id="studentArea" class="panel hidden">
+            <h3>My Project (Student View)</h3>
+            <div id="studentCard"></div>
+          </div>
+
+          <div id="leaderboardPublic" class="panel">
+            <h3>🏆 Leaderboard — Class 7</h3>
+            <div class="leaderboard" id="leaderboardDisplay"></div>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="box panel">
+            <h4>Quick Info</h4>
+            <p style="color:var(--muted)">Students: view-only. Teachers/Admins: manage reviews and leaderboard.</p>
+          </div>
+
+          <div id="adminControls" class="box panel hidden">
+            <h4>Admin Controls</h4>
+            <button class="btn" onclick="showAddStudentForm()">Add Student</button>
+            <button class="btn" onclick="showLeaderboardEditor()">Edit Leaderboard</button>
+            <div style="margin-top:12px">
+              <label><small>Export</small></label>
+              <div style="display:flex;gap:8px;margin-top:6px"><button class="btn" onclick="exportCSV()">Export CSV</button></div>
+            </div>
+          </div>
+<div id="atlControls" class="box panel hidden">
+  <h4>ATL Teacher Actions</h4>
+  <button class="btn" onclick="changeATLPassword()">Change My Password</button>
+</div>
+
+          <div id="adminEditor" class="box panel hidden">
+            <h4>Edit Student / Leaderboard</h4>
+            <div id="editorForm"></div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /**************************************************************************
+     * Full portal script
+     * - Student IDs are exactly as in the DB (001M, 002M ... 030D, etc.)
+     * - Students see only their own record and cannot submit or edit their review.
+     * - Teachers/Admins can edit student review, approve it, change leaderboard.
+     **************************************************************************/
+
+    // ----------------- Embedded JSON database (sections x 30 each) -----------------
+    const DB = {
+  "students": {
+    "mahanadi": [
+      { "id": "001M", "name": "Aarna Negi", "password": "password", "review": "", "approved": false },
+      { "id": "002M", "name": "Alysha Sharma", "password": "password", "review": "", "approved": false },
+      { "id": "003M", "name": "Ananya Suthin", "password": "password", "review": "", "approved": false },
+      { "id": "004M", "name": "Arthak Shukla", "password": "password", "review": "", "approved": false },
+      { "id": "005M", "name": "Aryaman Gupta", "password": "password", "review": "", "approved": false },
+      { "id": "006M", "name": "Atharv Sharma", "password": "password", "review": "", "approved": false },
+      { "id": "007M", "name": "Avyaan Mathur", "password": "password", "review": "", "approved": false },
+      { "id": "008M", "name": "Ayush Majumdar", "password": "password", "review": "", "approved": false },
+      { "id": "009M", "name": "Azalea Chellani Kumar", "password": "password", "review": "", "approved": false },
+      { "id": "010M", "name": "Chirag Yadav", "password": "password", "review": "", "approved": false },
+      { "id": "011M", "name": "Dhairya Katoch", "password": "password", "review": "", "approved": false },
+      { "id": "012M", "name": "Dhruv Bubbar", "password": "password", "review": "", "approved": false },
+      { "id": "013M", "name": "Dia Kapur", "password": "password", "review": "", "approved": false },
+      { "id": "014M", "name": "Eira", "password": "password", "review": "", "approved": false },
+      { "id": "015M", "name": "Hridya Yadav", "password": "password", "review": "", "approved": false },
+      { "id": "016M", "name": "Jveer Singh", "password": "password", "review": "", "approved": false },
+      { "id": "017M", "name": "Karnik Prakash", "password": "password", "review": "", "approved": false },
+      { "id": "018M", "name": "Kiara Aluwalia", "password": "password", "review": "", "approved": false },
+      { "id": "019M", "name": "Myra Arora", "password": "password", "review": "", "approved": false },
+      { "id": "020M", "name": "Naisha Kapoor", "password": "password", "review": "", "approved": false },
+      { "id": "021M", "name": "Raghuvendra Mittal", "password": "password", "review": "", "approved": false },
+      { "id": "022M", "name": "Reyansh Sachdeva", "password": "password", "review": "", "approved": false },
+      { "id": "023M", "name": "Ranvir Dhavan", "password": "password", "review": "", "approved": false },
+      { "id": "024M", "name": "Saira Daniel", "password": "password", "review": "", "approved": false },
+      { "id": "025M", "name": "Shanaya Kapoor", "password": "password", "review": "", "approved": false },
+      { "id": "026M", "name": "Shanaya Sharma", "password": "password", "review": "", "approved": false },
+      { "id": "027M", "name": "Shanaya Shrivastava", "password": "password", "review": "", "approved": false },
+      { "id": "028M", "name": "Suvir Tossanie Sumit Sethia", "password": "password", "review": "", "approved": false },
+      { "id": "029M", "name": "Yuvaan Chawla", "password": "password", "review": "", "approved": false },
+      { "id": "030M", "name": "Vihaan Bhutani", "password": "password", "review": "", "approved": false }
+    ],
+
+    "tapti": [
+      { "id": "001T", "name": "Student 1 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "002T", "name": "Student 2 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "003T", "name": "Student 3 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "004T", "name": "Student 4 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "005T", "name": "Student 5 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "006T", "name": "Student 6 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "007T", "name": "Student 7 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "008T", "name": "Student 8 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "009T", "name": "Student 9 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "010T", "name": "Student 10 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "011T", "name": "Student 11 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "012T", "name": "Student 12 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "013T", "name": "Student 13 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "014T", "name": "Student 14 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "015T", "name": "Student 15 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "016T", "name": "Student 16 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "017T", "name": "Student 17 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "018T", "name": "Student 18 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "019T", "name": "Student 19 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "020T", "name": "Student 20 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "021T", "name": "Student 21 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "022T", "name": "Student 22 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "023T", "name": "Student 23 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "024T", "name": "Student 24 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "025T", "name": "Student 25 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "026T", "name": "Student 26 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "027T", "name": "Student 27 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "028T", "name": "Student 28 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "029T", "name": "Student 29 Tapti", "password": "password", "review": "", "approved": false },
+      { "id": "030T", "name": "Student 30 Tapti", "password": "password", "review": "", "approved": false }
+    ],
+
+    "ravi": [
+      { "id": "001R", "name": "Student 1 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "002R", "name": "Student 2 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "003R", "name": "Student 3 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "004R", "name": "Student 4 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "005R", "name": "Student 5 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "006R", "name": "Student 6 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "007R", "name": "Student 7 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "008R", "name": "Student 8 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "009R", "name": "Student 9 Ravi", "password": "password",  "review": "", "approved": false },
+      { "id": "010R", "name": "Student 10 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "011R", "name": "Student 11 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "012R", "name": "Student 12 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "013R", "name": "Student 13 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "014R", "name": "Student 14 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "015R", "name": "Student 15 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "016R", "name": "Student 16 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "017R", "name": "Student 17 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "018R", "name": "Student 18 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "019R", "name": "Student 19 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "020R", "name": "Student 20 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "021R", "name": "Student 21 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "022R", "name": "Student 22 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "023R", "name": "Student 23 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "024R", "name": "Student 24 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "025R", "name": "Student 25 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "026R", "name": "Student 26 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "027R", "name": "Student 27 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "028R", "name": "Student 28 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "029R", "name": "Student 29 Ravi", "password": "password", "review": "", "approved": false },
+      { "id": "030R", "name": "Student 30 Ravi", "password": "password", "review": "", "approved": false }
+    ],
+
+    "jhelum": [
+      { "id": "001J", "name": "Aarav Agarwal", "password": "password", "review": "", "approved": false },
+      { "id": "002J", "name": "Student 2 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "003J", "name": "Student 3 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "004J", "name": "Student 4 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "005J", "name": "Student 5 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "006J", "name": "Student 6 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "007J", "name": "Student 7 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "008J", "name": "Student 8 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "009J", "name": "Student 9 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "010J", "name": "Student 10 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "011J", "name": "Student 11 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "012J", "name": "Student 12 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "013J", "name": "Student 13 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "014J", "name": "Student 14 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "015J", "name": "Student 15 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "016J", "name": "Student 16 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "017J", "name": "Student 17 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "018J", "name": "Student 18 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "019J", "name": "Student 19 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "020J", "name": "Student 20 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "021J", "name": "Student 21 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "022J", "name": "Student 22 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "023J", "name": "Student 23 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "024J", "name": "Student 24 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "025J", "name": "Student 25 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "026J", "name": "Student 26 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "027J", "name": "Student 27 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "028J", "name": "Student 28 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "029J", "name": "Student 29 Jhelum", "password": "password", "review": "", "approved": false },
+      { "id": "030J", "name": "Student 30 Jhelum", "password": "password", "review": "", "approved": false }
+    ],
+
+    "chenab": [
+      { "id": "001C", "name": "Student 1 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "002C", "name": "Student 2 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "003C", "name": "Student 3 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "004C", "name": "Student 4 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "005C", "name": "Student 5 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "006C", "name": "Student 6 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "007C", "name": "Student 7 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "008C", "name": "Student 8 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "009C", "name": "Student 9 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "010C", "name": "Student 10 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "011C", "name": "Student 11 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "012C", "name": "Student 12 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "013C", "name": "Student 13 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "014C", "name": "Student 14 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "015C", "name": "Student 15 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "016C", "name": "Student 16 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "017C", "name": "Student 17 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "018C", "name": "Student 18 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "019C", "name": "Student 19 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "020C", "name": "Student 20 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "021C", "name": "Student 21 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "022C", "name": "Student 22 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "023C", "name": "Student 23 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "024C", "name": "Student 24 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "025C", "name": "Student 25 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "026C", "name": "Student 26 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "027C", "name": "Student 27 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "028C", "name": "Student 28 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "029C", "name": "Student 29 Chenab", "password": "password", "review": "", "approved": false },
+      { "id": "030C", "name": "Student 30 Chenab", "password": "password", "review": "", "approved": false }
+    ],
+
+    "damodar": [
+      { "id": "001D", "name": "Student 1 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "002D", "name": "Student 2 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "003D", "name": "Student 3 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "004D", "name": "Student 4 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "005D", "name": "Student 5 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "006D", "name": "Student 6 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "007D", "name": "Student 7 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "008D", "name": "Student 8 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "009D", "name": "Student 9 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "010D", "name": "Student 10 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "011D", "name": "Student 11 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "012D", "name": "Student 12 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "013D", "name": "Student 13 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "014D", "name": "Student 14 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "015D", "name": "Student 15 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "016D", "name": "Student 16 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "017D", "name": "Student 17 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "018D", "name": "Student 18 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "019D", "name": "Student 19 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "020D", "name": "Student 20 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "021D", "name": "Student 21 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "022D", "name": "Student 22 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "023D", "name": "Student 23 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "024D", "name": "Student 24 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "025D", "name": "Student 25 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "026D", "name": "Student 26 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "027D", "name": "Student 27 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "028D", "name": "Student 28 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "029D", "name": "Student 29 Damodar", "password": "password", "review": "", "approved": false },
+      { "id": "030D", "name": "Student 30 Damodar", "password": "password", "review": "", "approved": false }
+    ]
+  },
+  "leaderboard": {
+    "rank1": { "name": "", "project": "" },
+    "rank2": { "name": "", "project": "" },
+    "rank3": { "name": "", "project": "" }
+  }
+};
+
+    // ----------------- Build USERS object for easy lookup -----------------
+    // Map each student id (001M, 002T, ...) to a user record for login
+    const USERS = {};
+    Object.keys(DB.students).forEach(sectionKey=>{
+      const arr = DB.students[sectionKey];
+      arr.forEach(s=>{
+        USERS[s.id] = {
+          password: s.password,
+          role: 'student',
+          name: s.name,
+          section: sectionKey === 'mahanadi' ? 'Mahanadi' :
+                   sectionKey === 'tapti' ? 'Tapti' :
+                   sectionKey === 'ravi' ? 'Ravi' :
+                   sectionKey === 'jhelum' ? 'Jhelum' :
+                   sectionKey === 'chenab' ? 'Chenab' :
+                   sectionKey === 'damodar' ? 'Damodar' : sectionKey,
+          admission: s.id,
+          project: '',
+          category: '',
+          review: s.review || '',
+          teacherFeedback: '',
+          status: s.approved ? 'Approved' : 'Pending',
+          lastUpdated: ''
+        };
+      });
+    });
+
+    // sample projects for a few students to make display meaningful (admins can edit)
+    USERS['001M'].project = 'USB 4WD Car with Gas Sensor';
+    USERS['001M'].category = 'Robotics';
+    USERS['001M'].review = 'My car design uses an Arduino UNO and a gas sensor. (Read-only until teacher edits/approves)';
+    USERS['001M'].teacherFeedback = 'Good start. Tidy wiring and test the gas threshold.';
+    USERS['001M'].status = 'Approved';
+    USERS['001M'].lastUpdated = '2025-11-22';
+
+    // add a couple more sample projects for display
+    if(USERS['004M']){ USERS['004M'].project = 'Line Following Robot'; USERS['004M'].category='Robotics'; }
+    if(USERS['008M']){ USERS['008M'].project = 'Smart Dustbin'; USERS['008M'].category='IoT'; }
+
+    // admin accounts
+    const ADMINS = {
+      'teacher1': {password:'teacher2025', role:'teacher', label:'Class 7 Teacher'},
+      'atl1': {password:'atl2025', role:'atl', label:'ATL Teacher'},
+      'super': {password:'super2025', role:'super', label:'Super Admin'}
+    };
+
+    // leaderboard (editable)
+    let LEADERBOARD = [
+      {rank:1,name: USERS['001M'] ? USERS['001M'].name : '',section: USERS['001M']? USERS['001M'].section:'',project: USERS['001M']?USERS['001M'].project:'',note:'',img:''},
+      {rank:2,name: USERS['008M'] ? USERS['008M'].name : '',section: USERS['008M']? USERS['008M'].section:'',project: USERS['008M']?USERS['008M'].project:'',note:'',img:''},
+      {rank:3,name: USERS['004M'] ? USERS['004M'].name : '',section: USERS['004M']? USERS['004M'].section:'',project: USERS['004M']?USERS['004M'].project:'',note:'',img:''}
+    ];
+
+    // runtime state
+    let currentUser = null; // {id, role}
+
+    // ----------------- UI helpers -----------------
+    function $(id){return document.getElementById(id)}
+    function show(el){ if(!el) return; el.classList.remove('hidden'); }
+    function hide(el){ if(!el) return; el.classList.add('hidden'); }
+
+    function fillSample(){
+      const role = $('roleSelect').value;
+      if(role==='student'){ $('username').value='001M'; $('password').value='password'; }
+      else if(role==='teacher'){ $('username').value='teacher1'; $('password').value='teacher2025'; }
+      else if(role==='atl'){ $('username').value='atl1'; $('password').value='atl2025'; }
+      else { $('username').value='super'; $('password').value='super2025'; }
+    }
+
+function handleLogin(){
+    const role = $('roleSelect').value.trim();  // trim spaces
+    const u = $('username').value.trim();
+    const p = $('password').value.trim();
+    const msg = $('login-msg');
+    msg.textContent='';
+
+    if(!u || !p){
+        msg.textContent = 'Enter username & password.';
+        return;
+    }
+
+    if(role === 'student'){
+        const rec = USERS[u];
+        if(!rec || rec.password !== p){
+            msg.textContent='❌ Invalid student credentials.';
+            return;
+        }
+        currentUser = { id: u, role: 'student', label: rec.name };
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        afterLogin();
+    } else {
+        const rec = ADMINS[u];
+        if(!rec || rec.password !== p){
+            msg.textContent='❌ Invalid admin credentials.';
+            return;
+        }
+        currentUser = { id: u, role: rec.role, label: rec.label };
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        afterLogin();
+    }
+}
+function afterLogin(){
+  hide($('landing'));
+  window.scrollTo(0, 0);
+  hide($('auth-area'));
+  show($('main'));
+  $('who').textContent = 'Role: ' + currentUser.role.toUpperCase();
+  $('userLabel').textContent = currentUser.label ? ' | ' + currentUser.label : '';
+
+  // show appropriate areas
+  if(currentUser.role === 'student'){
+    show($('studentArea'));
+    hide($('adminArea'));
+    hide($('adminControls'));
+    hide($('adminEditor'));
+    hide($('atlControls'));
+    renderStudentView(currentUser.id);
+  } else if(currentUser.role === 'atl'){
+    hide($('studentArea'));
+    hide($('adminArea'));
+    hide($('adminControls'));
+    hide($('adminEditor'));
+    show($('atlControls'));
+  } else {
+    show($('adminArea'));
+    show($('adminControls'));
+    show($('adminEditor'));
+    hide($('studentArea'));
+    hide($('atlControls'));
+    renderStudentsList();
+  }
+
+  renderLeaderboard();
+}
+
+// Logout function — global scope
+function logout(){
+  localStorage.removeItem('currentUser');
+  currentUser = null;
+  hide($('main'));
+  show($('auth-area'));
+  $('username').value='';
+  $('password').value='';
+  $('login-msg').textContent='';
+}
+   // ----------------- Student view (read-only) -----------------
+    function renderStudentView(id){
+      const rec = USERS[id];
+      if(!rec){ $('studentCard').innerHTML = '<p style="color:#ff9999">Student data not found.</p>'; return; }
+      const html = `
+        <div style="padding:10px;border-radius:8px;background:#081218;border:1px solid rgba(255,255,255,0.02)">
+          <h4>${rec.name} — <small style="color:var(--muted)">${rec.section}</small></h4>
+          <p><b>ID:</b> ${id} &nbsp; <b>Admission:</b> ${rec.admission}</p>
+          <p><b>Project:</b> ${rec.project || '—' } <span style="color:var(--muted)">(${rec.category || '—'})</span></p>
+          <hr>
+          <h4>Student Reflection (Read-only)</h4>
+          <p style="white-space:pre-wrap">${rec.review || 'No reflection submitted.'}</p>
+          <hr>
+          <h4>Teacher Feedback (Read-only)</h4>
+          <p style="white-space:pre-wrap">${rec.teacherFeedback || 'No feedback yet.'}</p>
+          <p><b>Status:</b> ${rec.status} &nbsp; <small style="color:var(--muted)">Last updated: ${rec.lastUpdated || '—'}</small></p>
+        </div>
+      `;
+      $('studentCard').innerHTML = html;
+    }
+
+    // ----------------- Admin functions -----------------
+    function renderStudentsList(list){
+      const cont = $('studentsList'); cont.innerHTML = '';
+      // keys: if list passed, it's array of ids; otherwise show all in order grouped by section
+      let ids = list || Object.keys(USERS);
+      if(ids.length === 0){ cont.innerHTML = '<p style="color:var(--muted)">No students found.</p>'; return; }
+      // display grouped by section for easier navigation
+      const grouped = {};
+      ids.forEach(id=>{
+        const s = USERS[id];
+        grouped[s.section] = grouped[s.section] || [];
+        grouped[s.section].push(id);
+      });
+      Object.keys(grouped).forEach(section=>{
+        const secHeader = document.createElement('div');
+        secHeader.className = 'muted';
+        secHeader.style.marginTop='10px';
+        secHeader.innerHTML = `<strong>${section}</strong>`;
+        cont.appendChild(secHeader);
+        grouped[section].forEach(id=>{
+          const s = USERS[id];
+          const div = document.createElement('div'); div.className='student-row';
+          div.innerHTML = `<div><strong>${s.name}</strong> <div style="color:var(--muted);font-size:.9rem">${id} • ${s.section} • ${s.project || '—'}</div></div>
+            <div style="display:flex;gap:8px;align-items:center"><button class='btn' onclick="openEditor('${id}')">Edit</button><button class='btn ghost' onclick="viewStudentAs('${id}')">View</button></div>`;
+          cont.appendChild(div);
+        });
+      });
+    }
+
+    function doSearch(){
+      const q = $('adminSearch').value.trim().toLowerCase();
+      const section = $('filterSection').value;
+      const keys = Object.keys(USERS).filter(id=>{
+        const s=USERS[id];
+        if(section && s.section !== section) return false;
+        if(!q) return true;
+        return id.toLowerCase().includes(q) || s.name.toLowerCase().includes(q) || (s.project||'').toLowerCase().includes(q) || (s.category||'').toLowerCase().includes(q);
+      });
+      renderStudentsList(keys);
+    }
+
+    function openEditor(id){
+      const s = USERS[id];
+      const form = $('editorForm');
+      form.innerHTML = `
+        <label><small>Student ID</small></label>
+        <input id='edit_id' value='${id}' disabled>
+        <label><small>Name</small></label>
+        <input id='edit_name' value='${escapeHtml(s.name)}'>
+        <label><small>Section</small></label>
+        <select id='edit_section'><option>Mahanadi</option><option>Tapti</option><option>Ravi</option><option>Jhelum</option><option>Chenab</option><option>Damodar</option></select>
+        <label><small>Project Title</small></label>
+        <input id='edit_project' value='${escapeHtml(s.project)}'>
+        <label><small>Category</small></label>
+        <input id='edit_category' value='${escapeHtml(s.category)}'>
+        <label><small>Student Review (students cannot edit)</small></label>
+        <textarea id='edit_review' rows='4'>${escapeHtml(s.review)}</textarea>
+        <label><small>Teacher Feedback</small></label>
+        <textarea id='edit_feedback' rows='3'>${escapeHtml(s.teacherFeedback)}</textarea>
+        <label><small>Status</small></label>
+        <select id='edit_status'><option>Pending</option><option>Approved</option><option>Rejected</option></select>
+        <div style='display:flex;gap:8px;margin-top:8px'><button class='btn' onclick="saveStudentEdit()">Save</button><button class='btn ghost' onclick="deleteStudent()">Delete</button></div>
+      `;
+      $('edit_section').value = s.section;
+      $('edit_status').value = s.status;
+      form.setAttribute('data-editing', id);
+      show($('adminEditor'));
+    }
+
+    function saveStudentEdit(){
+      const id = $('editorForm').getAttribute('data-editing');
+      if(!id) return alert('No student selected');
+      const s = USERS[id];
+      s.name = $('edit_name').value.trim();
+      s.section = $('edit_section').value;
+      s.project = $('edit_project').value.trim();
+      s.category = $('edit_category').value.trim();
+      // Note: students cannot edit their own review — teacher/admin can change it here
+      s.review = $('edit_review').value.trim();
+      s.teacherFeedback = $('edit_feedback').value.trim();
+      s.status = $('edit_status').value;
+      s.lastUpdated = new Date().toISOString().split('T')[0];
+      // if id changed (we do not allow changing ID here) -> skip
+      renderStudentsList();
+      alert('Saved');
+    }
+
+    function deleteStudent(){
+      const id = $('editorForm').getAttribute('data-editing');
+      if(!id) return; if(!confirm('Delete student '+id+'?')) return;
+      delete USERS[id];
+      renderStudentsList(); $('editorForm').innerHTML=''; hide($('adminEditor'));
+    }
+
+    function viewStudentAs(id){
+      // open a small window with read-only student view
+      const s=USERS[id];
+      const html = `<div style="padding:12px;background:#071218;border-radius:8px;color:#e6f7ff"><h4>${s.name} — <small style='color:var(--muted)'>${s.section}</small></h4><p><b>ID:</b> ${id}</p><p><b>Project:</b> ${s.project || '—' } (${s.category || '—'})</p><hr><h4>Student Reflection</h4><p>${escapeHtml(s.review) || 'No reflection.'}</p><hr><h4>Teacher Feedback</h4><p>${escapeHtml(s.teacherFeedback) || 'No feedback yet.'}</p></div>`;
+      const win = window.open('','studentView','width=600,height=500'); win.document.body.style.background='#071018'; win.document.body.style.color='#e6f7ff'; win.document.title = s.name; win.document.body.innerHTML = html;
+    }
+
+    function showAddStudentForm(){
+      const form = $('editorForm');
+      form.setAttribute('data-editing','');
+      form.innerHTML = `
+        <label><small>New Student ID (format: 001M, 001T, etc.)</small></label>
+        <input id='new_id' placeholder='001M'>
+        <label><small>Name</small></label>
+        <input id='new_name'>
+        <label><small>Section</small></label>
+        <select id='new_section'><option>Mahanadi</option><option>Tapti</option><option>Ravi</option><option>Jhelum</option><option>Chenab</option><option>Damodar</option></select>
+        <label><small>Project</small></label>
+        <input id='new_project'>
+        <label><small>Category</small></label>
+        <input id='new_category'>
+        <label><small>Initial Teacher Feedback (optional)</small></label>
+        <textarea id='new_feedback' rows='3'></textarea>
+        <div style='display:flex;gap:8px;margin-top:8px'><button class='btn' onclick="addStudent()">Add Student</button></div>
+      `;
+      show($('adminEditor'));
+    }
+
+    function addStudent(){
+      const id = $('new_id').value.trim(); if(!id) return alert('Enter ID');
+      if(USERS[id]) return alert('ID exists');
+      const name = $('new_name').value.trim() || 'Unnamed';
+      const section = $('new_section').value;
+      USERS[id] = {password:'password', role:'student', name:name, section:section, admission:id, project:$('new_project').value.trim(), category:$('new_category').value.trim(), review:'', teacherFeedback:$('new_feedback').value.trim(), status:'Pending', lastUpdated:new Date().toISOString().split('T')[0]};
+      renderStudentsList(); alert('Added with default password "password" (students cannot change it here).');
+    }
+
+    // ----------------- Leaderboard editor -----------------
+    function renderLeaderboard(){
+      const cont = $('leaderboardDisplay'); cont.innerHTML='';
+      LEADERBOARD.forEach(item=>{
+        const div = document.createElement('div'); div.className='rank ' + (item.rank===1? 'gold': item.rank===2? 'silver':'bronze');
+        div.innerHTML = `<strong>Rank ${item.rank} — ${item.name || '—'}</strong><div style='color:var(--muted)'>${item.section || '—'} • ${item.project || '—'}</div><div style='margin-top:6px;color:var(--muted)'>${item.note || ''}</div>`;
+        cont.appendChild(div);
+      });
+    }
+
+    function showLeaderboardEditor(){
+      const form = $('editorForm');
+      form.setAttribute('data-editing','leaderboard');
+      form.innerHTML = `<h4>Edit Leaderboard</h4>` + LEADERBOARD.map(item=>{
+        return `<label><small>Rank ${item.rank} Name</small></label><input id='lb_name_${item.rank}' value='${escapeHtml(item.name)}'>
+                <label><small>Project</small></label><input id='lb_proj_${item.rank}' value='${escapeHtml(item.project)}'>
+                <label><small>Section</small></label><input id='lb_sec_${item.rank}' value='${escapeHtml(item.section)}'>
+                <label><small>Note</small></label><input id='lb_note_${item.rank}' value='${escapeHtml(item.note)}'>
+                <hr>`
+      }).join('') + `<div style='display:flex;gap:8px'><button class='btn' onclick="saveLeaderboard()">Save Leaderboard</button></div>`;
+      show($('adminEditor'));
+    }
+
+    function saveLeaderboard(){
+      for(let r=1;r<=3;r++){
+        LEADERBOARD[r-1].name = $('lb_name_'+r).value.trim();
+        LEADERBOARD[r-1].project = $('lb_proj_'+r).value.trim();
+        LEADERBOARD[r-1].section = $('lb_sec_'+r).value.trim();
+        LEADERBOARD[r-1].note = $('lb_note_'+r).value.trim();
+      }
+      renderLeaderboard(); alert('Leaderboard updated');
+    }
+
+    // ----------------- Utilities -----------------
+    function escapeHtml(s){ return (s||'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    function exportCSV(){
+      let csv = 'ID,Name,Section,Admission,Project,Category,Status,LastUpdated\n';
+      Object.keys(USERS).forEach(id=>{
+        const s = USERS[id];
+        csv += `${id},"${s.name.replace(/"/g,'""')}",${s.section},${s.admission},"${(s.project||'').replace(/"/g,'""')}",${s.category || ''},${s.status || ''},${s.lastUpdated || ''}\n`;
+      });
+      const blob = new Blob([csv],{type:'text/csv'});
+      const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='class7_export.csv'; a.click(); URL.revokeObjectURL(url);
+    }
+
+   document.addEventListener('DOMContentLoaded', () => {
+  // load current user from localStorage
+  const saved = localStorage.getItem('currentUser');
+  if (saved) {
+    try {
+      currentUser = JSON.parse(saved);
+      afterLogin();  // use existing function to handle UI
+    } catch (e) {
+      console.error('Failed to parse currentUser from localStorage', e);
+      localStorage.removeItem('currentUser');
+    }
+  }
+
+  // render leaderboard anyway
+  renderLeaderboard();
+
+  // load theme
+  const savedTheme = localStorage.getItem('ATL_THEME');
+  if (savedTheme === 'light') document.body.classList.add('light');
+});
+
+function toggleTheme(){
+  document.body.classList.toggle("light");
+  localStorage.setItem("ATL_THEME",
+    document.body.classList.contains("light") ? "light" : "dark"
+  );
+}
+
+// Load theme on page load
+(function(){
+  const savedTheme = localStorage.getItem("ATL_THEME");
+  if(savedTheme === "light"){
+    document.body.classList.add("light");
+  }
+})();
+
+function changeATLPassword() {
+  const newPass = prompt("Enter your new password:");
+  if(!newPass) return alert("Password change cancelled.");
+  if(newPass.length < 4) return alert("Password too short (min 4 chars).");
+
+  // update in ADMINS object
+  if(ADMINS['atl1']){
+    ADMINS['atl1'].password = newPass;
+    alert("Password updated successfully!");
+  } else {
+    alert("Error: ATL teacher account not found.");
+  }
+}
+    // End of script
+  </script>
+</body>
+</html>
